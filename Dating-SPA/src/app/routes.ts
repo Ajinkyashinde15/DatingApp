@@ -7,9 +7,9 @@ import { ListsComponent } from './lists/lists.component';
 import { AuthGuard } from './route_guards/auth.guard';
 
 export const appRoutes : Routes = [
-    { path: 'home' , component: HomeComponent},
+    { path: '' , component: HomeComponent}, //Home Component
     { path: 'members' , component: MemberListComponent, canActivate: [AuthGuard]},
     { path: 'messages' , component: MessagesComponent, canActivate: [AuthGuard]},
     { path: 'lists' , component: ListsComponent, canActivate: [AuthGuard]},
-    { path: '**' , redirectTo: 'home', pathMatch:'full'},
+    { path: '**' , redirectTo: '', pathMatch:'full'},
 ];
