@@ -23,6 +23,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { config } from 'rxjs';
 import { MemberdetailComponent } from './members/member-detail/member-detail.component';
 import {NgxGalleryModule} from 'ngx-gallery';
+import { MembersEditComponent } from './members/members-edit/members-edit.component';
 
 export function tokenGetter()
 {
@@ -41,7 +42,8 @@ export function tokenGetter()
       ListsComponent,
       MessagesComponent,
       MemberCardComponent,
-      MemberdetailComponent
+      MemberdetailComponent,
+      MembersEditComponent
    ],
    imports: [
       BrowserModule,

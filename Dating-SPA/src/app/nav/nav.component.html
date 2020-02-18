@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
   <div class="container">
-    <a class="navbar-brand" [routerLink]="['/home']">Datin App</a>
+    <a class="navbar-brand" [routerLink]="['/home']">Dating App</a>
 
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
       <li class="nav-item active" routerLinkActive="active">
@@ -22,9 +22,10 @@
       </a>
     
       <div class="dropdown-menu mt-3" style="cursor: pointer;" *dropdownMenu>
-        <a class="dropdown-item" href="#"><i class="fa fa-user"></i>Edit Profile</a>
+        <a class="dropdown-item mt-1" [routerLink]="['/members/edit']" >
+          <i class="fa fa-user"></i>Edit Profile</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#" (click)="logout()"><i class="fa fa-sign-out" ></i>Logout</a>
+        <a class="dropdown-item mt-1" href="#" (click)="logout()"><i class="fa fa-sign-out" ></i>Logout</a>
       </div>
     </div>
 
